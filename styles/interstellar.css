@@ -1,0 +1,607 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fugaz+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700&display=swap');
+
+
+/* ||RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* || VARIABLES */
+:root{
+    /* ||COLORS */
+    --TEXT-COLOR: #fff;
+    --IMPORTANT-TEXT: rgb(14, 162, 248);
+    --BEFORE-HOVER: rgb(132, 202, 243);
+
+    /* ||FONTS */
+    --FF: 'Fugaz One', cursive;
+    --MAIN-TITLE-FONT: 5rem;
+    --TITLE-FONT: 3rem;
+    --TEXT-FONT: 1.5rem;
+    --SMALL-TITLE-FONT: 2rem;
+
+    /* ||FONTS MOBILE VERSION */
+    --MOBILE-MAIN-TITLE-FONT: 2.5rem;
+    --MOBILE-TITLE-FONT: 1.9rem;
+    --MOBILE-TEXT-FONT: 1rem;
+
+    /* ||FONTS TABLETS VERSTION */
+    --TABLET-MAIN-TITLE-FONT: 4rem;
+    --TABLET-TITLE-FONT: 2.5rem;
+    --TABLET-TEXT-FONT: 1.5rem
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--FF);
+    text-transform: capitalize;
+}
+
+.header__title {
+    font-size: var(--TITLE-FONT);
+}
+
+.header{
+    background-image: url(../interstellar/interstellar_images/interstellar\ background.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+}
+
+.header__title {
+    color: var(--TEXT-COLOR);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 150px 0;
+    font-size: var(--MAIN-TITLE-FONT);
+} 
+
+.header__link {
+    color: var(--TEXT-COLOR);
+    text-decoration: none;
+    font-size: var(--SMALL-TITLE-FONT);
+    display: flex;
+    padding-left: 50px;
+    width: 15%;
+}
+
+.header__link:hover {
+    color: var(--IMPORTANT-TEXT);
+}
+
+
+.header__link,
+.header__title {
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-name: title-animation;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: var(--PRIMARY-COLOR);
+}
+
+.main__about  {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding: 300px 0;
+}
+
+.main__about__image__phone-tablets {
+    display: none;
+}
+
+.main__about__image {
+    width: 50%;
+}
+
+.main__about__text {
+    width: 50%;
+    font-size: var(--TEXT-FONT);
+    padding: 0  50px;
+}
+
+.main__about__link {
+    color: rgba(0, 0, 0, 0.571);
+    display: block;
+    padding: 30px 0;
+}
+
+.main__info {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.main__info p {
+    padding: 10px;
+}
+
+.main__info a {
+    color: rgb(255, 166, 0);
+    text-decoration: none;
+}
+
+/* .main__trailer {
+    display: flex;
+    align-items: center;
+    padding: 300px 0;
+    flex-direction: column;
+}
+
+.main__trailer__title {
+    padding-bottom: 20px;
+    font-size: var(--TITLE-FONT);
+}
+
+.main__trailer__video {
+    width: 50%;
+   height: calc(.5625 * 50vw);
+} */
+
+/* .main__movie {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main__movie__title {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: var(--TITLE-FONT);
+}
+
+.main__movie__video {
+    width: 80%;
+    margin: 0 auto;
+}
+ */
+.main__cast {
+    padding-top: 200px;
+    text-align: center;
+}
+
+.main__cast__title  {
+    font-size: var(--TITLE-FONT);
+    padding: 50px 0;
+}
+
+.main__cast__all-actors {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main__cast__actor {
+    padding: 10px 0;
+}
+
+.main__cast__actor__name a{
+    text-decoration: none;
+    color: black;
+}
+
+.main__cast__actor__name a:hover {
+    text-decoration: underline;
+    color: rgba(0, 0, 0, 0.66);
+}
+
+.main__cast__actor__character {
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.523);
+}
+
+.main__important-people {
+    display: flex;
+    justify-content: center;
+    padding: 150px 0 ;
+}
+
+.main__important-people__card {
+    background-color: #d7d7d7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.main__important-people__card p {
+    padding: 20px 0;
+}
+
+.main__important-people__card p a {
+    text-decoration: none;
+    color: black;
+}
+
+.main__important-people__card p a:hover {
+    color: rgba(0, 0, 0, 0.562);
+    text-decoration: underline;
+}
+
+.main__important-people__card img {
+    width: 100%;
+    height: 150px;
+}
+
+.main__important-people__card .main__important-people__card__music {
+    color: green;
+    display: flex;
+    justify-content: center;
+}
+
+.main__important-people__card .main__important-people__card__music:hover {
+    color: rgb(0, 164, 0);
+}
+
+.footer {
+    background-color: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: 1.3rem;
+}
+
+.footer__info a {
+    text-decoration: none;
+    color: var(--IMPORTANT-TEXT)
+}  
+
+@keyframes title-animation {
+    from {
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.dark-mode {
+    color: white;
+    background-color: black;
+}
+
+/* ||MOBILE VERSION */
+@media (max-width: 576px) {
+    .header {
+        background-image: url(../interstellar/interstellar_images/Matthew\ McConaughey\ Interstellar\ Movie\ IPhone\ 6\ Wallpaper.jpg);
+        height: 120vh;
+    }
+
+    .header__title {
+       font-size: var(--MOBILE-MAIN-TITLE-FONT);
+    }
+
+    .header__link {
+        font-size: var(--MOBILE-TITLE-FONT);
+        padding: 10px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .main__about {
+        font-size: var(--MOBILE-TEXT-FONT);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 150px 0;
+    }
+
+    .main__about__image {
+        display: none;
+    }
+
+    .main__about__text h2 {
+        font-size: var(--MOBILE-TITLE-FONT);
+    }
+
+    .main__about__text {
+        width: 100%;
+        text-align: center;
+        padding: 0 10px;
+        font-size: var(--MOBILE-TEXT-FONT);
+    }
+
+    .main__about__link {
+        padding: 10px;
+    }
+
+    .main__about__image__phone-tablets {
+        display: inline;
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .main__trailer {
+        margin:  150px 0;
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+    }
+
+    .main__trailer__title {
+        padding: 10px;
+        font-size: var(--MOBILE-TITLE-FONT);
+    }
+
+    .main__trailer__video {
+        width: 90%;
+        height: calc( 60vw);
+    }
+    
+    .main__movie {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main__movie__title {
+        font-size: var(--MOBILE-TITLE-FONT);
+        padding-bottom: 10px
+
+    }
+
+    .main__movie__video {
+        width: 100%;
+    }
+
+   .main__cast__title {
+        font-size: var(--MOBILE-TITLE-FONT);
+   }
+
+   .main__important-people__card {
+        margin: 10px 
+   }
+
+   .footer {
+    text-align: center;
+   }
+}
+
+/* ||TABLETS */
+@media (min-width: 576px) {
+    .header {
+        background-image: url(../interstellar/interstellar_images/Matthew\ McConaughey\ Interstellar\ Movie\ IPhone\ 6\ Wallpaper.jpg);
+    }
+
+    .header__title {
+       font-size: var(--TABLET-MAIN-TITLE-FONT);
+    }
+
+    .header__link {
+        font-size: var(--TABLET-TITLE-FONT);
+        padding: 10px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .main__about {
+        font-size: var(--TABLET-TEXT-FONT);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 150px 0;
+    }
+
+    .main__about__image {
+        display: none;
+    }
+
+    .main__about__text {
+        width: 100%;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .main__about__link {
+        padding: 10px;
+    }
+
+    .main__about__image__phone-tablets {
+        display: inline;
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .main__trailer {
+        margin:  150px 0;
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+    }
+
+    .main__trailer__title {
+        padding: 10px;
+        font-size: var(--TABLET-TITLE-FONT);
+       
+    }
+
+    .main__trailer__video {
+        width: 90%;
+        height: calc( 60vw);
+    }
+
+    .main__movie {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main__movie__title {
+        font-size: var(--TABLET-TITLE-FONT);
+    }
+
+    .main__movie__video {
+        width: 100%;
+    }
+
+    .main__cast__title {
+        font-size: var(--TABLET-TITLE-FONT);
+    }
+
+    .main__important-people__card {
+        margin: 0 20px;
+    }
+}
+
+/* ||SMALL LABTOBS */
+@media (min-width: 770px) {
+    .header {
+        background-image: url(../interstellar/interstellar_images/interstellar\ background.jpg);
+    }
+
+    .header__title {
+        font-size: var(--MAIN-TITLE-FONT);
+    }
+
+    .header__link {
+        justify-content: center;
+    }
+
+    .main {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .main__about  {
+        display: flex;
+        justify-content: start;
+        flex-direction: row;
+        width: 80%;
+        padding: 300px 0;
+    }
+    
+    .main__about__image__phone-tablets {
+        display: none;
+    }
+
+    .main__about__image {
+        width: 50%;
+        display: inline;
+        height: auto;
+    }
+    
+    .main__about__text {
+        width: 50%;
+        font-size: var(--TEXT-FONT);
+        padding: 0  50px;
+        text-align: start;
+    }
+    
+    .main__about__link {
+        color: rgba(0, 0, 0, 0.571);
+        display: block;
+        padding: 30px 0;
+    }
+
+    
+    .main__trailer {
+        margin:  150px 0;
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+    }
+
+    .main__trailer__title {
+        padding: 10px;
+    }
+
+    .main__trailer__video {
+        width: 70%;
+        height: calc( 40vw);
+    }
+
+    .main__cast__title {
+        font-size: var(--TITLE-FONT);
+       }
+
+}
+
+/* ||LARGE LABTOBS AND DESKTOPS */
+@media (min-width: 1200px) {
+    .header__link {
+        justify-content: start;
+        padding: 10px 40px;
+        width: 20%;
+    }
+
+    .main {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .main__about  {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        padding: 300px 0;
+    }
+    
+    .main__about__image__phone-tablets {
+        display: none;
+    }
+    
+    .main__about__image {
+        width: 50%;
+    }
+    
+    .main__about__text {
+        width: 50%;
+        font-size: var(--TEXT-FONT);
+        padding: 0  50px;
+    }
+
+        
+    .main__trailer {
+        margin:  300px 0;
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+    }
+
+    .main__trailer__title {
+        padding: 10px;
+        font-size: var(--TITLE-FONT);
+    }
+
+    .main__trailer__video {
+        width: 50%;
+        height: calc( 30vw);
+    }
+
+    .main__movie {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main__movie__title {
+        font-size: var(--TITLE-FONT);
+        padding-bottom: 20px
+    }
+
+    .main__movie__video {
+        width: 80%;
+    }
+}
